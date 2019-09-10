@@ -1,0 +1,357 @@
+import React, { Component, PropTypes } from 'react';
+import _ from "underscore";
+import imageMapResize from "../vendor/imageMapResizer.js"
+import SlideDown from "./SlideDown"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group' // ES6
+
+let clickTargets = [
+
+	{
+		toolbeltName: "Body",
+		beeName: "Body",
+		toolbeltImg: "tb-body.png",
+		beeImg: "bee-body.png",
+		toolbeltCaption: "Content > Body",
+		beeCaption: "Body card",
+		group: "News Article"
+	},
+
+	{
+		toolbeltName: "Embedded Assets",
+		beeName: "asset embed",
+		toolbeltImg: "tb-embedded-asset.png",
+		beeImg: "bee-embedded-asset.png",
+		toolbeltCaption: "Content > Body > Embedded Asset",
+		beeCaption: "Body card > embed asset in between paragraphs",
+		info: "Instead of creating body groups to insert assets, users can simply embed assets in between paragraphs in BEE's text editor.",
+		group: "News Article"
+	},
+
+	{
+		toolbeltName: "Title",
+		beeName: "Title",
+		toolbeltImg: "tb-title.png",
+		beeImg: "bee-title.png",
+		toolbeltCaption: "Content > Title",
+		beeCaption: "General Info > Title",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Slug",
+		beeName: "Slug",
+		toolbeltImg: "tb-slug.png",
+		beeImg: "bee-slug.png",
+		toolbeltCaption: "Core > Slug. Slug field on the top is available in all tabs.",
+		beeCaption: "General Info > Slug",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Creator",
+		beeName: "Byline",
+		toolbeltImg: "tb-creator.png",
+		beeImg: "bee-byline.png",
+		toolbeltCaption: "Attribution > Creator, Attribution > Creator overwrite",
+		beeCaption: "General Info > Byline",
+		info: "Toolbelt had two separate fields for the Creator nodes that existing in the system and free text for external contributors. In BEE, both cases are handled with a single Byline field.",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Link Headline",
+		beeName: "Link Headline",
+		toolbeltImg: "tb-link-headline.png",
+		beeImg: "bee-link-headline.png",
+		toolbeltCaption: "Promotional View > Link Headline",
+		beeCaption: "General Info > Link Headline",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "SEO Title",
+		beeName: "SEO Title",
+		toolbeltImg: "tb-seo-title.png",
+		beeImg: "bee-seo-title.png",
+		toolbeltCaption: "Content > SEO Title",
+		beeCaption: "SEO > SEO Title",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Keywords",
+		beeName: "Keywords",
+		toolbeltImg: "tb-keywords.png",
+		beeImg: "bee-keywords.png",
+		toolbeltCaption: "Content > Keywords",
+		beeCaption: "SEO > Keywords",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Promo Assets",
+		beeName: "Promo image",
+		toolbeltImg: "tb-promo-assets.png",
+		beeImg: "bee-media-promo.png",
+		toolbeltCaption: "Promotional View > Promo Assets",
+		beeCaption: "Media > image that has usage Promo",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Tweet Override",
+		beeName: "Twitter Link Headline",
+		toolbeltImg: "tb-tweet-override.png",
+		beeImg: "bee-twitter-link-headline.png",
+		toolbeltCaption: "Promotional View > Tweet Override",
+		beeCaption: "Social > Twitter > Link Headline",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Franchise",
+		beeName: "Sections",
+		toolbeltImg: "tb-franchise.png",
+		beeImg: "bee-sections.png",
+		toolbeltCaption: "Content > Franchise",
+		beeCaption: "Associations > Sections",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Primary Assets",
+		beeName: "Primary Tags",
+		toolbeltImg: "tb-primary-assets.png",
+		beeImg: "bee-primary-tags.png",
+		toolbeltCaption: "Content > Primary Assets",
+		beeCaption: "Associations > Primary Tags",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Related Assets",
+		beeName: "Related Tags",
+		toolbeltImg: "tb-related-assets.png",
+		beeImg: "bee-related-tags.png",
+		toolbeltCaption: "Content > Related Assets",
+		beeCaption: "Associations > Related Tags",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Team",
+		beeName: "Team",
+		toolbeltImg: "tb-team.png",
+		beeImg: "bee-team.png",
+		toolbeltCaption: "Project Management > Team",
+		beeCaption: "Team and Project > Team",
+		group: "News Article"
+	},
+	{
+		toolbeltName: "Project",
+		beeName: "Project",
+		toolbeltImg: "tb-project.png",
+		beeImg: "bee-project.png",
+		toolbeltCaption: "Project Management > Project",
+		beeCaption: "Team and Project > Project",
+		group: "News Article"
+	}
+
+]
+
+
+
+
+
+export default class App extends Component {
+
+
+	static defaultProps = {
+		clickTargets: clickTargets.map((item,index)=> {
+			item.id = index;
+			return item;
+		})
+	}
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			//currIndex: null,
+			curr: null,
+			selected: props.clickTargets[0]
+		}
+	}
+
+	componentDidMount() {
+		imageMapResize();
+	}
+
+	clickArea = (index, e) => {
+		console.log("The bounding rect", e.target.getBoundingClientRect() )
+		e.preventDefault();
+
+
+
+		let item = this.props.clickTargets[index];
+		this.setState({
+			currIndex: index
+		})
+		console.log("clicked on ", item);
+	}
+
+
+	selectItem = (item, e) => {
+		this.setState({
+			selected: item
+		})
+	}
+
+
+	render() {
+		let tooltipStyle;
+		let  {selected} = this.state;
+		let clickTargets = this.props.clickTargets;
+		let grouped = _.groupBy(clickTargets, (item) => { return item.group });
+
+		console.log("grouped", grouped);
+
+		let currIndex = this.state.currIndex;
+		if (currIndex !== null) {
+		}
+
+		return (
+			<div className="main">
+<<<<<<< HEAD
+=======
+
+			<header>
+				<h5>BEE + Toolbelt Field Mapping</h5>
+			</header>
+>>>>>>> 6bb4d21414786e1fa3398f21e76f82962bbc6ed7
+				<div className="nav">
+					{
+						Object.keys(grouped).map(groupName => {
+							return <NavGroup key={groupName} name={groupName} items={grouped[groupName]} selectItem={this.selectItem} selected={selected}/>
+						})
+					}
+				</div>
+<<<<<<< HEAD
+				<ReactCSSTransitionGroup transitionName="content" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+				{
+					selected ?
+						<div className="content" key={selected.id}>
+							<div className="content-item">
+								<div className="content-item__imgs">
+									<div className="content-item__img-wrapper">
+										<h1 className="content-item__title">
+											Toolbelt field: { selected.toolbeltName }
+										</h1>
+										<img src={"/assets/img/" + selected.toolbeltImg } />
+										<div className="content-item__caption">{ selected.toolbeltCaption }</div>
+=======
+				<div className="content">
+					{
+							selected ?
+								(
+									<div className="content-item">
+										<div className="content-item__imgs">
+											<div className="content-item__img-wrapper">
+												<h1 className="content-item__title">
+													Toolbelt field: { selected.toolbeltName }
+												</h1>
+												<img src={"assets/img/" + selected.toolbeltImg } />
+												<div className="content-item__caption">{ selected.toolbeltCaption }</div>
+											</div>
+											<div className="content-item__arrow">
+												<i className="iconcss icon-right-arrow" />
+											</div>
+											<div className="content-item__img-wrapper">
+												<h1 className="content-item__title">
+													Bee field: { selected.beeName }
+												</h1>
+												<img src={"assets/img/" + selected.beeImg } />
+												<div className="content-item__caption">{ selected.beeCaption }</div>
+											</div>
+>>>>>>> 6bb4d21414786e1fa3398f21e76f82962bbc6ed7
+										</div>
+										<div className="content-item__arrow">
+											<i className="iconcss icon-right-arrow" />
+									</div>
+									<div className="content-item__img-wrapper">
+										<h1 className="content-item__title">
+											Bee field: { selected.beeName }
+										</h1>
+										<img src={"/assets/img/" + selected.beeImg } />
+										<div className="content-item__caption">{ selected.beeCaption }</div>
+									</div>
+								</div>
+								{
+									selected.info ?
+										<p className="content-item__info">
+											{ selected.info }
+										</p>
+									:
+										null
+								}
+							</div>
+						</div>
+					:
+						null
+
+				}
+				</ReactCSSTransitionGroup>
+
+			</div>
+		)
+	}
+
+}
+
+
+class NavGroup extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			isOpen: true
+		}
+	}
+
+	toggleOpen = () => {
+		this.setState({
+			isOpen: !this.state.isOpen
+		})
+	}
+
+	render() {
+
+		let group = this.props.group;
+		let name = this.props.name;
+		let items = this.props.items;
+		let selected = this.props.selected;
+
+		let isOpen = this.state.isOpen;
+		return (
+
+			<div className={"nav-group" + (isOpen ? " nav-group--open" : "")}>
+				<div className="nav-group__title" onClick={this.toggleOpen}>
+					{name}
+					<div className="chevron"></div>
+				</div>
+				<SlideDown isOpen={isOpen} duration={300}>
+					<div className="nav-title">
+						<div>Toolbelt</div>
+						<div>Bee</div>
+					</div>
+
+					{
+						items.map((target,index) => {
+							return (
+
+								<div className={"nav-item" + (selected === target ? " nav-item--active" : "")}
+									key={index} onClick={this.props.selectItem.bind(this, target)}>
+									<div className="nav-item__l">
+										{target.toolbeltName}
+									</div>
+									<div className="nav-item__r">
+										{target.beeName}
+									</div>
+									<div className="nav-item__arrow iconcss icon-right-arrow"></div>
+								</div>
+							)
+						})
+					}
+				</SlideDown>
+			</div>
+		)
+	}
+}

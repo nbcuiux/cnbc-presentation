@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BEE Multi-generation Plan</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+        <link rel="shortcut icon" href="http://fm.cnbc.com/applications/cnbc.com/staticcontent/img/mobile/touch/cnbc-logo-sharing-114.jpg" />
+		<noscript>
+			<style>
+				.st-accordion ul li{
+					height:auto;
+				}
+				.st-accordion ul li > a span{
+					visibility:hidden;
+				}
+			</style>
+		</noscript>
+    </head>
+    <body>
+      <div class="container">
+            <h1><img style="width:100px; top: 30px; position: relative;" src="images/bee-orange.svg" /> BEE Multi-Generation Plan</h1>
+            <div class="timeline-wrapper">
+                <div class="timeline-image"></div>
+                <div class="timeline-ancors">
+                    <div class="timeline-phase-1"></div>
+                    <div class="timeline-phase-2"></div>
+                    <div class="timeline-phase-3"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="st-header">
+                  <h2>Phase 1: Dashboard</h2>
+                  <div class="st-stats">
+                    <div class="st-stat-item">AUG '17</div>
+                  </div>
+                </div>
+                <div id="st-accordion" class="st-accordion">
+                    <ul>
+                        <li>
+                            <a href="#">1.0 <img src="images/icons/speed-test.svg" class="performance-icon" /> Dashboard Analytics<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase1-0.png" style="width: 800px" />
+                                <h2>Features</h2>
+                                <p>- Article Statistics: &nbsp; Display the relevant statistics of the articles that user has touched (search, filter, and remove)<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of page views, both yesterday and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of visits, both yesterday and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of unique views, both yesterday and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Top 5 Referrals and numbers<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Devices: Desktop, Mobile, etc.
+                                </p>
+                                <p>- Top 10 article statistics: &nbsp; See the top 10 articles that are performing well during the last 24 hours and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of page views, both past 24 hours and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of visits, both past 24 hours and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of unique views, both past 24 hours and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Top 5 Referrals and numbers<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Devices: Desktop, Mobile, etc.
+                                </p>
+                                <p>- Top 10 video statistics: &nbsp; See the top 10 videos that are performing well during the last 24 hours and lifetime<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of video starts
+                                </p>
+                                <p>- Section Monthly Trending: &nbsp; See the number of monthly unique visitors per section
+                                </p>
+                                <p>- Byline statistics: &nbsp; See the number of  unique visits that all the articles of each writer gathered yesterday as well as in lifetime
+                                </p>
+                                <p>- Sitewide Statistics: &nbsp;View the sitewide statistics<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of visits<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of page views<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Number of unique visits<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Month-to-date unique visits<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Video viewers<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Video starts<br />
+                                </p>
+                                <h2>External Services</h2>
+                                <p>- Statistics: Chartbeat, Omniture, SocialFlow, etc.</p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">1.1 <img src="images/icons/speed-test.svg" class="performance-icon" /> BEE API<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <h2>Features</h2>
+                                    <p>Toolbelt integration (BEE API ingests Toolbelt endpoints)</p>
+                                    <p>- Content (media), CRUD, Tags</p>
+                                    <p>- Infrastructure &amp; Setup</p>
+                                    <p>- BEE API Endpoints - endpoints around content<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- BEE - Content News API to access X<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Overview rather than each of the content type</p>
+                                    <p>- Mock API adapter<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Create mock data<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- use on BEE - access Toolbelt placeholder content for X<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Can be part of the BEE API</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">1.2 <img src="images/icons/speed-test.svg" class="performance-icon" /> User &amp; Login<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase1-2.png" style="width: 800px" />
+                                <h2>Features</h2>
+                                <p>- SSO Login</p>
+                                <p>- Need to store photo, user's role information, and user's Slack account information<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;- Explore the existing Toolbelt User information</p>
+                                <p>- Role-based permissions:&nbsp; Contextual, role-based UI would only expose the fields and functionalities that are pertinent to each role.</p>
+                                <p>- Last visited spot:&nbsp; When the user logs in again to the CMS, he would be taken back to the spot that he has left off before closing the window or logging out</p>
+                            </div>
+                        </li>
+                        
+                       
+                        <li>
+                            <a href="#">1.3 <img src="images/icons/speed-test.svg" class="performance-icon" /> Dashboard<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase1-3.png" style="width: 800px" />
+                                <h2>Features</h2>
+                               
+                                <p>- Favorites: &nbsp; Display the user's favorited items on the Dashboard for quick shortcut (search, filter, remove, and rearrange)</p>
+                                <p>- Latest Published Contents: &nbsp; Show the list of the all the latest published contents in the CMS (load more and scroll within the card)</p>
+                                <p>- My Latest Activities:&nbsp; See all the activities that the user has performed (load more and scroll within the card)</p>
+                                <p>- Status Tracker:&nbsp; Track the status and activities happening to a specific set of contents that the user specifies</p>
+                                <p>- Notification &amp; Slack Integration: &nbsp;Receive notifications in a specific channel when the content you are tracking gets published</p>
+                                <p>- My Tasks (non-MVP)</p>  
+
+                                <h2>Further Exploration</h2>
+                                <p>- Dashboard cards can be shown/hidden and configurable per user</p>
+                            </div>
+                        </li>
+                         <li>
+                            <a href="#">1.4 <img src="images/icons/speed-test.svg" class="performance-icon" /> Content Library<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase1-4.png" style="width: 800px" />
+                                <h2>Features</h2>
+                                <p>- Information the user would see per item<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Thumbnail<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Slug<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Association (e.g. Section, Tags, etc.)
+                                </p>
+                                <p>- Flags to display on Dashboard<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Favorites<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Stats</p>
+                                <p>- Filter<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Content Type<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Association (e.g. Section, Tags, etc.)<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Publish status<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Author
+                                </p>
+                                <p>- Saved search/filter: &nbsp; Users can store the frequently used search and filter settings in the library</p>
+                                <p>- Recent search: &nbsp; Keywords that users recently searched for are readily available</p>
+                                <p>- Revision History: &nbsp; Both autosaves and hard saves &amp; published. There is an existing data in Toolbelt.</p>
+
+
+                            </div>
+                        </li>
+                         <li>
+                            <a href="#">1.5 <img src="images/icons/speed-test.svg" class="performance-icon" /> Global Search<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase1-5.png" style="width: 800px" />
+                                <h2>Features</h2>
+                                <p>- Search available from te top nav that searches over all content and assets in the CMS</p>
+                                <p>- Shortcut to open the search (Ctrl + S)</p>
+                                <p>- Combination of any keywords that searches over title, slug, description, and caption</p>
+                               
+                               <h2>Note</h2>
+                               <p>- It is desirable to have all the data migrated and have the search fully functional by the end of Phase 1</p>
+
+
+                            </div>
+                        </li>
+
+
+                        
+                    </ul>
+                </div>
+
+                <div class="st-header">
+                  <h2>Phase 2: Media Management</h2>
+                  <div class="st-stats">
+                    <div class="st-stat-item">NOV '17</div>
+                  </div>
+                </div>
+                <div id="st-accordion2" class="st-accordion">
+                    <ul>
+                    <li>
+                            <a href="#">2.1 <img src="images/icons/speed-test.svg" class="performance-icon" /> Media Library &amp; Related<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase2-1.png" style="width: 800px" />
+                                <p>All the media items will be displayed in the searchable/filterable Media Library.</p>
+                                <h2>Data Types</h2>
+                                <p>2.1.1 Image, Chart, Audio, File</p>
+                                <p>2.1.2 Gallery (Content Type)</p>
+
+
+                                <h2>Features</h2>
+                                <p>- Image Metadata:&nbsp; Image metadata will be stored in Toolbelt's database</p>
+                                <p>- Image Cropping - Focal Point &amp; rectangle:&nbsp; Focal points and rectangles can be set for different crops for different use cases on the front-end application<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Exploring Cloudinary vs. building custom services
+                                </p>
+                                <p>- Image editing options: Level and Vignetting</p>
+                                <p>- Grid View of the Media Library:&nbsp; Visual display of all the media items</p>
+                                <p>- 3rd party integration &amp; licensing:&nbsp; Users can view all the available images from 3rd party sources (Getty Image, AP, Reuters) in a single feed within the CMS. Photo Editors can license the photo directly from Media Library.</p>
+                                <p>- Search &amp; Filter:&nbsp; Keyword search and filters by type, source, license status, and last used in the Media Library<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Saved search<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Recent search</p>
+
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">2.2 <img src="images/icons/speed-test.svg" class="performance-icon" /> Video<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase2-2.png" style="width: 800px" />
+                                <h2>Data Type</h2>
+                                <p>2.2.1 Video</p>
+
+
+                                <h2>Features</h2>
+                                <p>- Edit video metadata: The list of metadata fields that editirs can currently edit in Toolbelt are:<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Slug<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Title<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Description<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Caption<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Thumbnail<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Keywords/Tags<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- SEO Fields<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Source<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Creator<br />
+                                </p>
+                                <p>- Static video metadata<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Source Filename<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Length<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Dimension / Quality, whichever applies<br />
+                                </p>
+                                <p>- Set thumbnail:&nbsp; select the current frame from video, upload from desktop, choose from Media Library images</p>
+                                <p>- Clip the video<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Currently being edited locally in Stratus
+                                </p>
+                                <p>- Upload the video<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Videos are stored in Akamai
+                                </p>
+                                <p>- Live stream clipping:&nbsp; Transferring the clipped video from the live clipping service<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Explore the service capability of Volicon</p>
+
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="st-header">
+                  <h2>Phase 3: Content Creation</h2>
+                  <div class="st-stats">
+                    <div class="st-stat-item">APR '18</div>
+                  </div>
+                </div>
+                <div id="st-accordion3" class="st-accordion">
+                    <ul>
+                    <li>
+                            <a href="#">3.1 <img src="images/icons/speed-test.svg" class="performance-icon" /> Article Creation &amp; Related<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase3-1.png" style="width: 800px" />
+                                <p>"Article content types" listed below have the same metadata and features.</p>
+
+                                <h2>Data Types</h2>
+                                <p>3.1.1 Breaking News (Security, Source, Team, Project)</p>
+                                <p>3.1.2 News Story, Blog Post</p>
+                                <p>3.1.3 Wire Story</p>
+                                <p>3.1.4 Partner Story</p>
+                                <p>3.1.5 Press Release</p>
+
+
+
+                                <h2>Features</h2>
+                                <p>- Field API</p>
+                                <p>- Text Editor:&nbsp; Clean and simple editor for the users to simultaneously edit and see real-time updates (e.g. Google Docs)</p>
+                                <p>- Simultaneous Editing and real-time updates of Text Editor &amp; fields:&nbsp; Multiple users to edit the same article content simultaneously</p>
+                                <p>- Autosaving &amp; Saving:&nbsp; Each session's autosave will be managed in BEE; Hard save &amp; publish actions will be managed in Toolbelt</p>
+                                <p>- Auto-tagging of assets:&nbsp; Auto-tagging of Security (stock ticker), Company, People, Organization, Place, and Event. User clicks to auto-tag, and appropriate text gets hyperlinked to corresponding asset pages</p>
+                                <p>- Social:&nbsp; Social metadata are auto-populated from Link Headline and Description fields. These can be overriden in specific social media fields with the ablity to preview (Twitter). Users have the ability to immediately tweet out the article content when publishing.</p>
+                                <p>- Homepage Banner &amp; Mobile Notification:&nbsp; Hot Seat Editors see the options to display the story on the homepage banner and send mobile notifications to the app end users.</p>
+                                <p>- Preview:&nbsp; High fidelity preview of the content - comes from Toolbelt</p>
+                                <p>- Revision History: &nbsp; Show revisions from both autosaves and hard saves &amp; published (accessible from Content Library)</p>
+                                <p>- Ability to clone:&nbsp; User can clone/create a copy of the content as a new node</p>
+                                <p>- Chat:&nbsp; Communicate with other users that are collaborating with the user within the article content<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- @ mentioning someone who is not in the article alerts them in Slack
+                                </p>
+                                <p>- Wire service integration:&nbsp; Partner Story, Wire Story, and Press Release will ingest the 3rd party articles - comes from Toolbelt</p>
+                                <p>- Presets:&nbsp; Users can save the pre-filled content in presets, for private use or public access (a.k.a. Contemplates in Toolbelt)</p>
+                                <p>- Task Assignments (non-MVP):&nbsp; Send assignment to a specific user or a team of users within the article content</p>
+
+                                
+
+                                <h2>Further Exploration</h2>
+                                <p>- Explore auto-tagging technology options: Media Lab &amp; Calais</p>
+                                <p>- Determine the use cases for Project, e.g. receiving Slack notification per project, native contents Publishing layer</p>
+                                <p>- Determine the use cases for Project, e.g. receiving Slack notification per project, native contents Publishing layer</p>
+                                <p>- Determine the ways to associate Project with content</p>
+                                <p>- Determine what security information should be stored in CMS vs. stored as GDS data</p>
+                                <p>- Explore matching Author with User</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">3.2 <img src="images/icons/speed-test.svg" class="performance-icon" /> TV/Prime<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase3-2.png" style="width: 800px" />
+                                <p>These content types are related to TV/Prime workflow.</p>
+
+                                <h2>Data Types</h2>
+                                <p>3.2.1 Episode</p>
+                                <p>3.2.2 Promo</p>
+                                <p>3.2.3 Series, Season</p>
+
+
+                                <h2>Features</h2>
+                                <p>- Restructure TV-related assets</p>
+                                <p>- Promote link or content with specified image and text</p>
+
+                                
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <a href="#">3.3 <img src="images/icons/speed-test.svg" class="performance-icon" /> Tags &amp; Collections<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <img src="images/phase3-3.png" style="width: 800px" />
+                                <p>In this phase, details on how to form a group or a page of articles will be determined.</p>
+
+
+                                <h2>Data Types</h2>
+                                <p>3.3.1 Section, Person, Organization, Company, Place, Event</p>
+                                <p>3.3.2 Curated Collection (Output List in Toolbelt)</p>
+                                <p>3.3.3 Dynamic Collection (Editorial Search > Feed in Toolbelt)</p>
+                                <p>3.3.4 Collection Group (e.g. Homepage, Prime's show page)</p>
+                                <p>3.3.5 Catchall Page</p>
+
+
+
+                                <h2>Features</h2>
+                                <p>- Tags:&nbsp; Categorization of articles</p>
+                                <p>- Sections will serve to structure Toolbelt's Parents organization, and automatic tagging of Sections will free the users from manually manage the structure<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Explore technology options: Media Lab &amp; Calais </p>
+                                <p>- Curated Collection:&nbsp; Users can manually select and specify the order of the items in a list, which are ranked for a page on the front-end application, e.g. list of artcies on the left rail on the homepage; carousel on a show page</p>
+                                <p>- Dynamic Collection:&nbsp; Users can set criteria to dynamically gather the items in a list, e.g. latest episodes, all the published content related to Make It's Entrepreneurs section</p>
+                                 <p>- Ability to switch Curated Collection to Dynamic Collection and vice versa</p>
+                                <p>- Collection Group:&nbsp; A group of collections/lists that composes a page on the front-end application, e.g. U.S. Homepage</p>
+                                <p>- Catchall Page:&nbsp; One-off pages for microsites or promotional pages</p>
+
+                                
+                               
+                                <h2>Further Exploration</h2>
+                                <p>- Explore matching the existing Company nodes with newly ingested Security; a previously private company can exist as a Company node, and corresponding Security node will be ingested when it becomes a public company</p>
+                                <p>- Determine the content types that can be inserted in the collections</p>
+                                <p>- Ability to edit code inside CMS for Catchall Page</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#">3.4 <img src="images/icons/speed-test.svg" class="performance-icon" /> Roles &amp; Configurations</span></a>
+                            <div class="st-content">
+                                <h2>Features</h2>
+                                <p>- Ability to configure user permissions</p>
+                                <p>- Ability to configure 3rd party settings, etc.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="spacer"></div>
+        </div>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	      <script type="text/javascript" src="js/jquery.accordion.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/triggers.js"></script>
+        <script type="text/javascript">
+            $(function() {
+	            $('#st-accordion').accordion();
+              $('#st-accordion2').accordion();
+              $('#st-accordion3').accordion();
+            });
+
+            $('.nav-trigger').click(function() {
+              $(this).toggleClass('open');
+              $('body').find('.nav-wrapper').toggleClass('open');
+              $('body').find('.nav-overlay').toggleClass('open');
+            });
+
+
+        </script>
+    </body>
+</html>

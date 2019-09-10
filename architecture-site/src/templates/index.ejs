@@ -1,0 +1,333 @@
+<%- include('includes/head') %>
+	<body>
+		<div class="container">
+			<header>
+				<a href="http://cnbc-ux.nbcuxlab.com/bee-architecture/">
+					<img src="assets/img/back-arrow.svg" />
+				</a>
+				<h5>BEE + Toolbelt Sequence</h5>
+			</header>
+			<div id="theGrid" class="main">
+				<section class="grid">
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Edit Content</h2>
+						<div class="loader"></div>
+						<span class="category">All Content Types</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/edit.svg" alt="Edit Content" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Publish, Save, Preview</h2>
+						<div class="loader"></div>
+						<span class="category">All Content Types</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/publish.svg" alt="Publish, Save, Preview Content" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Revert or Switch Versions</h2>
+						<div class="loader"></div>
+						<span class="category">All Content Types</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/revision.svg" alt="Revert or switch versions" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Search Content</h2>
+						<div class="loader"></div>
+						<span class="category">All Content Types</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/search-filter.svg" alt="Search Content" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Upload Media</h2>
+						<div class="loader"></div>
+						<span class="category">Media Library</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/upload-media.svg" alt="Upload Media" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Open Media Library</h2>
+						<div class="loader"></div>
+						<span class="category">Media Library</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/open-media-library.svg" alt="Open Media Library" />
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Search &amp; Filter in Media Library</h2>
+						<div class="loader"></div>
+						<span class="category">Media Library</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="assets/img/search-media.svg" alt="Search Media" />
+						</div>
+					</a>
+
+					<!-- <footer class="page-meta">
+						<span>Load more...</span>
+					</footer> -->
+				</section>
+				<section class="content">
+					<div class="scroll-wrap">
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/edit.svg" alt="Edit Content" />
+								<h2 class="title title--full">Edit Content</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user, I want to be able to edit the content in the CMS.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all BEE content types:
+										<ul>
+											<li><strong>PAGE</strong>: News Story, Blog, Partner Story, Wire story, Press Release, Breaking News, Gallery, Quiz, Poll, Catchall Page, Series, Season, Episode, Promo</li>
+											<li><strong>CATEGORY</strong>: Section, Curated Collection, Dynamic Collection, Collection Group, Person, Organization, Company, Place, Event, Security</li>
+											<li><strong>INTERNAL DATA</strong>: Source, Author, Project, Team</li>
+											<li><strong>METADATA</strong>: Image metadata, Video metadata</li>
+										</ul>
+										Content JSON needs to include:
+										<ul>
+											<li>Revision ID</li>
+											<li>Content ID</li>
+											<li>Fields &amp; Data Information</li>
+											<li>Link to preview url</li>
+											<li>etc.</li>
+										</ul>
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button style="visibility: hidden;"><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Visit_Edit_Page.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/publish.svg" alt="Publish, Save, Preview" />
+								<h2 class="title title--full">Publish, Save, Preview</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+									<ul>
+										<li>As a user, I want to be able to publish my changes to the current content.</li>
+										<li>As a user, I want to be able to save my changes to the current content as a draft.</li>
+										<li>As a user, I want to see a high-fidelity preview of the content.</li>
+									</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all BEE content types:
+										<ul>
+											<li><strong>PAGE</strong>: News Story, Blog, Partner Story, Wire story, Press Release, Breaking News, Gallery, Quiz, Poll, Catchall Page, Series, Season, Episode, Promo</li>
+											<li><strong>CATEGORY</strong>: Section, Curated Collection, Dynamic Collection, Collection Group, Person, Organization, Company, Place, Event, Security</li>
+											<li><strong>INTERNAL DATA</strong>: Source, Author, Project, Team</li>
+											<li><strong>METADATA</strong>: Image metadata, Video metadata</li>
+										</ul>
+										Content JSON needs to include:
+										<ul>
+											<li>Revision ID</li>
+											<li>Content ID</li>
+											<li>Fields &amp; Data Information</li>
+											<li>Link to preview url</li>
+											<li>etc.</li>
+										</ul>
+										Consider the following cases in Toolbelt:
+										<ul>
+											<li>First Publish/Save ever vs. Publish/Save the existing node in Toolbelt</li>
+											<li>Create a new version of the node when Publish/Save is selected</li>
+										</ul>
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Publish_Save_All_Content_Types.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/revision.svg" alt="Edit Content" />
+								<h2 class="title title--full">Revert or Switch Versions</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user, I want to revert the changes I have made to this content back to the original saved version.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all BEE content types:
+										<ul>
+											<li><strong>PAGE</strong>: News Story, Blog, Partner Story, Wire story, Press Release, Breaking News, Gallery, Quiz, Poll, Catchall Page, Series, Season, Episode, Promo</li>
+											<li><strong>CATEGORY</strong>: Section, Curated Collection, Dynamic Collection, Collection Group, Person, Organization, Company, Place, Event, Security</li>
+											<li><strong>INTERNAL DATA</strong>: Source, Author, Project, Team</li>
+											<li><strong>METADATA</strong>: Image metadata, Video metadata</li>
+										</ul>
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Revert.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/search-filter.svg" alt="Edit Content" />
+								<h2 class="title title--full">Search Content</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user I should be able to search through all content in the CMS by typing in a search keyword and see a list of results.</li>
+											<li>As a user I Should be able to search through all content in the CMS by selecting filter options.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										All content types in BEE can be searched in the Content Library:
+										<ul>
+											<li><strong>PAGE</strong>: News Story, Blog, Partner Story, Wire story, Press Release, Breaking News, Gallery, Quiz, Poll, Catchall Page, Series, Season, Episode, Promo</li>
+											<li><strong>CATEGORY</strong>: Section, Curated Collection, Dynamic Collection, Collection Group, Person, Organization, Company, Place, Event, Security</li>
+											<li><strong>INTERNAL DATA</strong>: Source, Author, Project, Team</li>
+										</ul>
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Search.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/upload-media.svg" alt="Edit Content" />
+								<h2 class="title title--full">Upload Media</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user, I want to upload media items to the CMS to embed them on articles and pages.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all Media types in BEE:
+										<ul>
+											<li><strong>MEDIA</strong>: Image, Video, Chart, Audio, File</li>
+											Video workflow to be determined.
+										</ul>
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Upload_Media.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/open-media-library.svg" alt="Edit Content" />
+								<h2 class="title title--full">Open Media Library</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user, I want to look at all the media items that are available for me to use.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all Media types in BEE:
+										<ul>
+											<li><strong>MEDIA</strong>: Image, Video, Chart, Audio, File</li>
+										</ul>
+										Video workflow to be determined.
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Open_Media_Library.svg" alt="" />
+							</div>
+						</article>
+
+						<article class="content__item">
+							<div class="meta meta--full">
+								<img class="meta__avatar" src="assets/img/search-media.svg" alt="Edit Content" />
+								<h2 class="title title--full">Search &amp; Filter in Media Library</h2>
+								<div class="meta__container">
+									<span class="meta__story"><i class="fa fa-align-left"></i> User Story</span>
+									<div class="meta__text">
+										<ul>
+											<li>As a user, I want to search through all media items  in the CMS &amp; 3rd party services by typing in a search keyword and see a list of results.</li>
+											<li>As a user, I want to search through all media items  in the CMS &amp; 3rd party services by selecting filter options.</li>
+										</ul>
+									</div>
+									<span class="meta__notes"><i class="fa fa-sticky-note"></i> Notes</span>
+									<div class="meta__text">
+										Applicable to all Media types in BEE:
+										<ul>
+											<li><strong>MEDIA</strong>: Image, Video, Chart, Audio, File</li>
+										</ul>
+										Video workflow to be determined.
+									</div>
+								</div>
+								<nav class="article-nav">
+									<button><i class="fa fa-angle-left"></i> <span>Previous</span></button>
+									<button><span>Next</span> <i class="fa fa-angle-right"></i></button>
+								</nav>
+							</div>
+							<div class="diagram">
+								<img src="assets/img/Search_Filter_Media.svg" alt="" />
+							</div>
+						</article>
+
+					</div>
+					<button class="close-button"><i class="fa fa-close"></i><span>Close</span></button>
+				</section>
+			</div>
+		</div><!-- /container -->
+		<script src="assets/js/classie.js"></script>
+		<script src="assets/js/transitions.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>
